@@ -1,0 +1,38 @@
+<mat-dialog-content class="mat-elevation-z0">
+<div fxFlex>
+    <mat-card class="mat-elevation-z0">
+
+      <!-- Title of invoice card that will display selected services -->
+      <mat-card-title>Order Invoice</mat-card-title>
+      <hr>
+    <br>
+
+    <mat-card-content>
+
+      <!-- Today's date will be displayed under card title -->
+      <p><i>{{ today | date }}</i></p>
+
+      <br>
+
+      <!-- Here, the selected services from checked checkboxes will appear with their price -->
+    <h4 *ngFor='let item of selectedItemsList'>{{ item.label }}</h4>
+    <br>
+    <hr>
+
+    <!-- Bellow the subtotal, tax, and total is calculated, allowing up to two decimals to be shown -->
+    <h4 class="subtotal">Subtotal: ${{ total | number: '1.1-2'}}</h4>
+    <h4 class="tax">Tax: ${{ tax | number: '1.1-2'}}</h4>
+    <h4><b>Total: ${{ total + tax | number: '1.1-2'}}</b></h4>
+
+  </mat-card-content>
+
+</mat-card>
+</div>
+
+</mat-dialog-content>
+
+<!-- The confirm button will close the invoice card -->
+<mat-dialog-actions>
+  <button mat-raised-button color="accent" mat-dialog-close>Confirm</button>
+</mat-dialog-actions>
+

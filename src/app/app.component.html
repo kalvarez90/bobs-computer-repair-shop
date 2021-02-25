@@ -1,0 +1,44 @@
+<mat-toolbar class="toolbar" color='primary'>
+  <mat-toolbar-row>
+
+        <!-- in-n-out book logo that will be on the top left -->
+    <div class="logo">
+      <img src="./assets/bobs-repair.logo.png" height="40" />
+    </div>
+
+        <!-- Navigation bar will bi located at the right side of the page -->
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start" data-test="navBar">
+        <button mat-button routerLink="/service-list">Services</button>
+        <button mat-button routerLink="/contact">Contact Us</button>
+        <button mat-button routerLink="/about">About Us</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br>
+<div fxLayout="row wrap">
+  <div fxFlex>
+
+      <!-- this will tell Angular flex-layout that this is a flex element under a flex-row-->
+    <mat-card class="main-container" >
+      <mat-card-title class="title">{{ assignment }}</mat-card-title>
+
+      <br>
+      <br>
+      <br>
+      <hr>
+      <br>
+
+
+      <!--
+        Router outer placeholder where information from each specific page will be shown
+        depending on what user clicks (about, contact, book-list)
+      -->
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

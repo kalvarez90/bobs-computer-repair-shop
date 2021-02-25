@@ -1,0 +1,70 @@
+<div fxLayoutGap='16px'>
+  <div fxFlex>
+
+    <mat-card class='mat-elevation-z0'>
+
+      <!-- Mat card title -->
+      <mat-card-title>
+        Services:
+      </mat-card-title>
+
+      <br>
+
+      <mat-card-content>
+
+        <!-- Here checkboxes will displayed with the different services offered by Bob's repair shop -->
+        <mat-list>
+          <mat-list-item *ngFor="let item of servicesList">
+            <mat-checkbox name="" id="" totalValue="" [(ngModel)]="item.isChecked" (change)="changeSelection()">
+              {{item.label}}
+            </mat-checkbox>
+          </mat-list-item>
+        </mat-list>
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
+
+<!-- When the submit button is clicked, an event will be creating pulling the information from the invoice file -->
+<div>
+  <button mat-button mat-raised-button color="accent" (click)='submit()'>Submit</button>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+
+<div fxLayout='column wrap'>
+  <div fxFlex>
+
+    <!-- Bellow is the second part of the site where it describes the promise of bob's shop -->
+  <mat-card class="mat-elevation-z0">
+    <br>
+    <mat-card-title>Our Promise</mat-card-title>
+
+    <mat-card-content>
+      <p> Our goal at Bob's Computer Repair Shop is to provide quality repair and service performed by qualified technicians you can trust.
+    Our managers, strive for superior customer service with every client we do business with.</p>
+<br>
+    <p><b>Bob's Computer Repair Shop Promise to You:</b></p>
+
+    <ul>
+      <li>We'll hold the highest standards for honesty</li>
+      <li>We're great with people! Everyone cares about you, and works to be your advocate. </li>
+      <li>We'll help  you find the best solution</li>
+      <li>We will always treat you with the upmost respect</li>
+      <li>We will discuss your repair or service needs in a way that is easy to understand</li>
+      <li>We guarantee all our work with our 30-days warranty</li>
+    </ul>
+
+    </mat-card-content>
+    <br>
+  </mat-card>
+
+  </div>
