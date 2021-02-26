@@ -95,27 +95,27 @@ servicesList = [
 
 ngOnInit(): void {
   this.total = 0;
-  this.fetchSelectedItems()
-  this.fetchCheckedIDs()
+  this.getSelectedItems()
+  this.getCheckedIDs()
 }
 
 // This function should reset total
 changeSelection() {
   this.total = 0;
-  this.fetchSelectedItems()
-  this.fetchCheckedIDs()
+  this.getSelectedItems()
+  this.getCheckedIDs()
 }
 
-fetchSelectedItems() {
-  this.selectedItemsList = this.servicesList.filter((value, index) => {
+getSelectedItems() {
+  this.selectedItemsList = this.servicesList.filter((value) => {
     return value.isChecked
   });
 }
 
 //This will push checked id's and calculate a total value
-fetchCheckedIDs() {
+getCheckedIDs() {
   this.checkedIDs = []
-  this.servicesList.forEach((value, index) => {
+  this.servicesList.forEach((value) => {
 
     if (value.isChecked) {
       this.checkedIDs.push(value.id);
