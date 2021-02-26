@@ -17,6 +17,9 @@
       <!-- Here, the selected services from checked checkboxes will appear with their price -->
     <h4 *ngFor='let item of selectedItemsList'>{{ item.label }} </h4>
     <br>
+
+      <h4 class="parts"> Parts Cost: ${{ partsCost | number: '1.1-2' }}</h4>
+
     <hr>
 
     <!-- Bellow the subtotal, tax, and total is calculated, allowing up to two decimals to be shown -->

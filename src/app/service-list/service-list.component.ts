@@ -26,9 +26,6 @@ checkedIDs = [];
 checkedValues = [];
 
 total: number;
-partsCost = 0;
-laborCost = 0;
-
 
 constructor(private dialog: MatDialog) {}
 
@@ -36,7 +33,10 @@ constructor(private dialog: MatDialog) {}
 submit() {
   const dialogRef = this.dialog.open(InvoiceDialogComponent, {
     width: '30%',
-    data: {selectedItemsList: this.selectedItemsList, total: this.total, partsCost: this.partsCost, laborCost: this.laborCost}
+    data: {
+      selectedItemsList: this.selectedItemsList,
+      total: this.total,
+    }
   });
 }
 
@@ -90,6 +90,14 @@ servicesList = [
       id: 'diskCleanUp',
       label: 'Disk Clean Up - $149.99',
       isChecked: false
+    },
+    {
+      name: "Extra Labor (per hour)",
+      value: 50,
+      id: 'extraLabor',
+      label: 'Extra Labor - $50/hour',
+      isChecked: false
+
     }
 ]
 
