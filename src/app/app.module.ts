@@ -31,7 +31,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatGridListModule } from '@angular/material/grid-list'
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MatGridListModule } from '@angular/material/grid-list'
     AboutComponent,
     ContactComponent,
     ServiceListComponent,
-    InvoiceDialogComponent
+    InvoiceDialogComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
